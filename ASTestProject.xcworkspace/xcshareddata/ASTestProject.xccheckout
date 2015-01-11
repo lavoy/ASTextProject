@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9F6F4748-13EC-436A-91DB-0FE034494F51</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ASTestProject</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>383AC7F2EF8BACBC4D595BEC6D76041BFF1952C8</key>
+		<string>github.com:lavoy/ASTextProject.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ASTestProject.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>383AC7F2EF8BACBC4D595BEC6D76041BFF1952C8</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:lavoy/ASTextProject.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>383AC7F2EF8BACBC4D595BEC6D76041BFF1952C8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>383AC7F2EF8BACBC4D595BEC6D76041BFF1952C8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ASTestProject</string>
+		</dict>
+	</array>
+</dict>
+</plist>

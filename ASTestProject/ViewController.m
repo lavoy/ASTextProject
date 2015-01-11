@@ -24,10 +24,11 @@ static CGFloat const kPadding = 20;
     // Do any additional setup after loading the view, typically from a nib.
     
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    self.scrollView.alwaysBounceVertical = YES;
     [self.view addSubview:self.scrollView];
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        ButtonNode *buttonNode = [ButtonNode buttonWithTitle:@"Watch Video"];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        ButtonNode *buttonNode = [ButtonNode buttonWithTitle:@"Watch Video"];        
         [buttonNode measure:CGSizeMake(self.view.bounds.size.width - (2 * kPadding), CGFLOAT_MAX)];
         
         buttonNode.frame = (CGRect) {
