@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "ButtonNode.h"
+
+static CGFloat const kPadding = 20;
 
 @interface ViewController ()
+
+@property (nonatomic, strong) UIScrollView *scrollView;
 
 @end
 
@@ -17,11 +22,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:self.scrollView];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        ButtonNode *buttonNode = [ButtonNode buttonWithTitle:@"Watch Video"];
+        [buttonNode measure:CGSizeMake(self.view.bounds.size.width - (2 * kPadding), CGFLOAT_MAX)];
+        
+        buttonNode.frame = (CGRect) {
+            .origin = CGPointMake(kPadding, 200),
+            .size = buttonNode.calculatedSize,
+        };
+        
+        [buttonNode addTarget:self action:@selector(buttonPressed:) forControlEvents:ASControlNodeEventTouchUpInside];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.scrollView addSubview:buttonNode.view];
+        });
+    });
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)buttonPressed:(id)sender {
+    NSLog(@"button pressed");
 }
 
 @end
