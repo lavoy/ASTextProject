@@ -19,7 +19,7 @@ const CGFloat ButtonCornerRadius = 6.0;
     
     if (buttonNode) {
         [buttonNode setTitleString:title];
-        
+        buttonNode.placeholderEnabled = NO;
         buttonNode.highlighted = NO;
     }
     
